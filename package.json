@@ -1,0 +1,32 @@
+{
+  "name": "git-commit-lint",
+  "version": "1.0.0",
+  "description": "angular git commit lint demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinFE/git-commit-lint.git"
+  },
+  "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MinFE/git-commit-lint/issues"
+  },
+  "homepage": "https://github.com/MinFE/git-commit-lint#readme",
+  "config": {
+    "ghooks": {
+      "pre-commit": "node build/lint.js",
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "ghooks": "^2.0.0",
+    "standard-version": "^4.2.0",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
