@@ -16,7 +16,7 @@ function getBranchName() {
                 reject(err);
             }
 
-            process.stdout.write(stdout);
+            resolve(stdout.match(/\*\s\S+/g).split(' ')[1]);
         });
     });
 }
