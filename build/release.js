@@ -31,7 +31,7 @@ function updateChangelog() {
                 tag: false
             }
         },
-        funcion(err) {
+        function(err) {
             if (err) {
                 throw err;
             }
