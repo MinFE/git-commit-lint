@@ -4,7 +4,8 @@
   "description": "angular git commit lint demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git cz"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
     "ghooks": {
       "pre-commit": "node build/lint.js",
       "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "devDependencies": {
