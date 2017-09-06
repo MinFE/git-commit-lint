@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git cz"
+    "gitcz": "node build/git-cz.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,6 @@
     "ghooks": {
       "pre-commit": "node build/lint.js",
       "commit-msg": "validate-commit-msg"
-    },
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "devDependencies": {
