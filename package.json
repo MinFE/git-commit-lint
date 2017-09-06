@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node build/lint.js",
     "gitcz": "node build/git-cz.js"
   },
   "repository": {
@@ -19,8 +20,9 @@
   "homepage": "https://github.com/MinFE/git-commit-lint#readme",
   "config": {
     "ghooks": {
-      "pre-commit": "node build/lint.js",
-      "commit-msg": "validate-commit-msg"
+      "pre-commit": "npm run lint",
+      "commit-msg": "validate-commit-msg",
+      "post-merge": "node build/release.js"
     }
   },
   "devDependencies": {
